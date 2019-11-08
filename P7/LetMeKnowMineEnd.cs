@@ -1,12 +1,13 @@
 ﻿using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 using System.Text;
 
 namespace P7
 {
-    public class LetMeKnowMineEnd:IDisposable
+    public class LetMeKnowMineEnd: IDisposable //CriticalFinalizerObject
     {
         bool disposed = false;
         SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
@@ -16,6 +17,7 @@ namespace P7
         }
         ~LetMeKnowMineEnd()
         {
+
             Console.WriteLine("Goodbye");
         }
 

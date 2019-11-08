@@ -15,6 +15,8 @@ namespace P7
             //Console.WriteLine(res1);
 
             #endregion
+
+
             #region 1-2
             //var numbers = new List<string>();
             //long total = 0;
@@ -27,7 +29,7 @@ namespace P7
             //total, total / numbers.Count);
 
 
-            ///// n*(n+1)/2 
+            //// n * (n + 1) / 2
             //Console.WriteLine("//////////Recursive Function /////////////");
             //Console.WriteLine(AddNumbers(10));
 
@@ -52,12 +54,12 @@ namespace P7
             #endregion
 
             #region 3
-            //LetMeKnowMineEnd  knowMineEnd   = new LetMeKnowMineEnd();
+            LetMeKnowMineEnd knowMineEnd = new LetMeKnowMineEnd();
             //knowMineEnd.Dispose();
             //Complex complex = new Complex();
             //complex.SetValue(1, 1);
             //complex.DisplayValue();
-            ////GC.Collect();
+            //GC.Collect();
             #endregion
 
             #region 4 -IDisposable
