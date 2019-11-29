@@ -9,6 +9,7 @@ namespace P8
     {
         static void Main(string[] args)
         {
+
             #region 1 -Getting an exception from a library call
             //using (var r = new StreamReader(@"C:\Temp\File.txt"))
             //{
@@ -60,7 +61,7 @@ namespace P8
 
             #endregion
 
-            #region 4 finally
+            #region 4- finally
             //try
             //{
             //    PrintFirstLineLength(@"C:\Temp\File.txt");
@@ -69,19 +70,20 @@ namespace P8
             //{
             //    Console.WriteLine("NullReferenceException");
             //}
-            //catch(Exception ex)
+            //catch (Exception ex)
             //{
             //    Console.WriteLine("#####################");
             //}
             //finally
             //{
+            //    //dispose object
             //    Console.WriteLine("Finally ...!");
             //}
 
 
             #endregion
 
-            #region Throw an Exception
+            #region 5- Throw an Exception
             //CountCommas(null);
             #endregion
 
@@ -90,7 +92,7 @@ namespace P8
             #region Bad
             //try
             //{
-            //   // DoSomething();
+            //    // DoSomething();
             //}
             //catch (IOException x)
             //{
@@ -101,17 +103,30 @@ namespace P8
             #endregion
 
             #region best
-            try
-            {
-               // DoSomething();
-            }
-            catch (IOException x)
-            {
-                LogIOError(x);
-                throw;
-            }
+            //try
+            //{
+            //    // DoSomething();
+            //}
+            //catch (IOException x)
+            //{
+            //    LogIOError(x);
+            //    throw;
+            //}
             #endregion
 
+            #endregion
+
+            #region 7 - Async
+            //Test t = new Test();
+            //try
+            //{
+            //    t.Call();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //Console.ReadLine();
             #endregion
         }
 
@@ -155,11 +170,12 @@ namespace P8
         {
             if (text == null)
             {
-                //throw new ArgumentNullException("text");
+               // throw new ArgumentNullException("text");
                 Console.WriteLine("Text");
                 return 0;
             }
             return text.Count(ch => ch == ',');
         }
+
     }
 }
